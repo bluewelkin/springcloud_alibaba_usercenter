@@ -1,25 +1,20 @@
-
-#
-# ÅäÖÃÊý¾ÝÔ´ÐÅÏ¢
-#
-############################################################
 spring:
   profiles:
     active: dev
-  datasource:                                           # Êý¾ÝÔ´µÄÏà¹ØÅäÖÃ
-    type: com.zaxxer.hikari.HikariDataSource          # Êý¾ÝÔ´ÀàÐÍ£ºHikariCP
-    driver-class-name: com.mysql.jdbc.Driver          # mysqlÇý¶¯
+  datasource:                                           # ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    type: com.zaxxer.hikari.HikariDataSource          # ï¿½ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½Í£ï¿½HikariCP
+    driver-class-name: com.mysql.jdbc.Driver          # mysqlï¿½ï¿½ï¿½ï¿½
     url: jdbc:mysql://localhost:3306/user_center?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true
     username: root
     password: root
     hikari:
-      connection-timeout: 30000       # µÈ´ýÁ¬½Ó³Ø·ÖÅäÁ¬½ÓµÄ×î´óÊ±³¤£¨ºÁÃë£©£¬³¬¹ýÕâ¸öÊ±³¤»¹Ã»¿ÉÓÃµÄÁ¬½ÓÔò·¢ÉúSQLException£¬ Ä¬ÈÏ:30Ãë
-      minimum-idle: 5                 # ×îÐ¡Á¬½ÓÊý
-      maximum-pool-size: 20           # ×î´óÁ¬½ÓÊý
-      auto-commit: true               # ×Ô¶¯Ìá½»
-      idle-timeout: 600000            # Á¬½Ó³¬Ê±µÄ×î´óÊ±³¤£¨ºÁÃë£©£¬³¬Ê±Ôò±»ÊÍ·Å£¨retired£©£¬Ä¬ÈÏ:10·ÖÖÓ
-      pool-name: DateSourceHikariCP     # Á¬½Ó³ØÃû×Ö
-      max-lifetime: 1800000           # Á¬½ÓµÄÉúÃüÊ±³¤£¨ºÁÃë£©£¬³¬Ê±¶øÇÒÃ»±»Ê¹ÓÃÔò±»ÊÍ·Å£¨retired£©£¬Ä¬ÈÏ:30·ÖÖÓ 1800000ms
+      connection-timeout: 30000       # ï¿½È´ï¿½ï¿½ï¿½ï¿½Ó³Ø·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Óµï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë£©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½SQLExceptionï¿½ï¿½ Ä¬ï¿½ï¿½:30ï¿½ï¿½
+      minimum-idle: 5                 # ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+      maximum-pool-size: 20           # ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+      auto-commit: true               # ï¿½Ô¶ï¿½ï¿½á½»
+      idle-timeout: 600000            # ï¿½ï¿½ï¿½Ó³ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë£©ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Í·Å£ï¿½retiredï¿½ï¿½ï¿½ï¿½Ä¬ï¿½ï¿½:10ï¿½ï¿½ï¿½ï¿½
+      pool-name: DateSourceHikariCP     # ï¿½ï¿½ï¿½Ó³ï¿½ï¿½ï¿½ï¿½ï¿½
+      max-lifetime: 1800000           # ï¿½ï¿½ï¿½Óµï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë£©ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½Í·Å£ï¿½retiredï¿½ï¿½ï¿½ï¿½Ä¬ï¿½ï¿½:30ï¿½ï¿½ï¿½ï¿½ 1800000ms
       connection-test-query: SELECT 1
 
 
