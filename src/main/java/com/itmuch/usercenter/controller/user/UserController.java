@@ -15,12 +15,16 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
 
     private final UserService userService;
+//    http://127.0.0.1:8081/users/1
+//    @GetMapping("/{id}")
+//    public User findById(@PathVariable Integer id){
+//        return  this.userService.findById(id);//
+//
+//    }
 
     @GetMapping("/{id}")
     public User findById(@PathVariable Integer id){
-        return  this.userService.findById(id);
-
-
+        return this.userService.findById(id);
     }
 
 }
